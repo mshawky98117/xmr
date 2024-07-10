@@ -1,1 +1,12 @@
+commands:
+  - name: Display GPU information using nvidia-smi
+    command: nvidia-smi
+    output: |
+      nvidia-smi output:
+      {{ nvidia_smi_output }}
 
+  - name: Display graphics controller information using lspci | grep VGA
+    command: lspci | grep VGA
+    output: |
+      lspci | grep VGA output:
+      {{ lspci_output }}
